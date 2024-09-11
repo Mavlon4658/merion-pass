@@ -118,7 +118,7 @@ body._body--new {
             font-size: 32px;
             font-weight: 500;
             line-height: 160%;
-            max-width: 600px;
+            max-width: 660px;
         }
 
         img {
@@ -441,4 +441,30 @@ body._body--new {
 .merionAbout {
     padding: 0;
     margin-bottom: 120px;
+}
+
+@media (max-width: 1400px) {
+    // Choose
+    .choose {
+        li {
+
+            &:nth-child(1) {
+                .choose_card:last-child {
+                    width: 436px;
+                }
+            }
+            
+            &:nth-child(2) {
+                .choose_card:first-child {
+                    width: 500px;
+                }
+            }
+            &:nth-child(3) {
+                .choose_card:last-child {
+                    width: 511px;
+                }
+            }
+        }
+    }
+    // Choose end
 }
