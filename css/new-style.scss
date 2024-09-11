@@ -1,0 +1,444 @@
+@font-face {
+    font-family: "Benzin";
+    src: url('../fonts/Benzin-Semibold.ttf');
+    font-weight: 600;
+}
+
+$font-benzin: 'Benzin', sans-serif;
+$font-nunito: "Nunito Sans", system-ui;
+$font-montserrat: "Montserrat", system-ui;
+
+body._body--new {
+    font-family: $font-montserrat;
+    font-weight: 400;
+    color: #1F1F1F;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 0;
+    }
+}
+
+.btn {
+    &_lightblue {
+        display: inline-flex;
+        padding: 20px 32px;
+        border-radius: 16px;
+        background: #B6D3FF;
+        color: #1F1F1F;
+        cursor: pointer;
+        user-select: none;
+        font-family: $font-montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        transition: .2s ease-in-out all;
+
+        &:hover, &:active {
+            background: #cce0ff;
+        }
+    }
+}
+
+.main {
+    &_title {
+        font-family: $font-benzin;
+        font-size: 48px;
+        line-height: 120%;
+    }
+
+    &_description {
+        font-family: $font-montserrat;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 160%;
+    }
+}
+
+// Home 
+.home {
+    background: #163DA8;
+    color: #fff;
+    border-radius: 0 0 100px 100px;
+    padding: 88px 0 194px;
+    font-family: $font-montserrat;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        font-family: $font-benzin;
+        font-size: 56px;
+        line-height: 120%;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 24px;
+        font-weight: 500;
+        opacity: 0.8;
+        max-width: 587px;
+        font-family: $font-montserrat;
+        margin-bottom: 40px;
+    }
+
+    img {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+    }
+}
+// Home  end
+
+// About
+.about {
+    padding-top: 120px;
+
+    .main_description {
+        max-width: 912px;
+        margin: 24px 0 64px;
+    }
+
+    &_body {
+        background: #B6D3FF;
+        border-radius: 56px;
+        position: relative;
+        z-index: 1;
+        padding: 40px 64px;
+        margin-bottom: 120px;
+
+        p {
+            font-family: $font-montserrat;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 160%;
+            max-width: 600px;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    &_card {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+
+        &__item {
+            width: 100%;
+            background: #FFF;
+            border-radius: 56px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            font-family: $font-montserrat;
+
+            h3 {
+                font-size: 32px;
+                font-family: $font-benzin;
+                line-height: 120%;
+                opacity: 0.7;
+            }
+
+            h4 {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 120%;
+                color: #1F1F1F;
+                opacity: 0.7;
+                margin-bottom: 4px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 160%;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(2) {
+                width: 416px;
+                flex-shrink: 0;
+
+                h3, h4 {
+                    color: #163DA8;
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(3) {
+                background: #163DA8;
+                color: #fff;
+
+                h3, h4 {
+                    opacity: 1;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+// About end
+
+// Work
+.work {
+    padding: 120px 0;
+
+    .main_description {
+        margin: 24px 0 40px;
+    }
+
+    &_card {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+
+        &__item {
+            background: #fff;
+            width: 100%;
+            border-radius: 56px;
+            padding: 40px;
+            font-family: $font-montserrat;
+
+            &:nth-child(3), &:nth-child(4) {
+                h3 {
+                    color: #365BB9;
+                }
+            }
+
+            h3 {
+                font-family: $font-benzin;
+                font-size: 32px;
+                line-height: 120%;
+                color: #7697DC;
+                margin-bottom: 40px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            li {
+                &:last-child {
+                    h4 {
+                        color: #163DA8;
+                    }
+                }
+            }
+
+            h4 {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 120%;
+                margin-bottom: 4px;
+            }
+            
+            p {
+                margin: 0;
+                font-size: 16px;
+                line-height: 160%;
+                font-weight: 300;
+            }
+        }
+    }
+}
+// Work end
+
+// Choose
+.choose {
+    background: url('../images/choose-bg.png') center/cover no-repeat;
+    padding: 88px 0;
+
+    .main_title {
+        color: #FFF;
+        margin-bottom: 40px;
+    }
+
+    &_card {
+        background: #fff;
+        border-radius: 56px;
+        padding: 40px 40px 40px 32px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        font-family: $font-montserrat;
+        width: 100%;
+
+        img {
+            width: 40px;
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 120%;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 160%;
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    li {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+
+        &:nth-child(1) {
+            .choose_card:last-child {
+                flex-shrink: 0;
+                width: 513px;
+            }
+        }
+        
+        &:nth-child(2) {
+            .choose_card:first-child {
+                flex-shrink: 0;
+                width: 580px;
+            }
+        }
+        &:nth-child(3) {
+            .choose_card:last-child {
+                flex-shrink: 0;
+                width: 580px;
+            }
+        }
+    }
+}
+// Choose end
+
+// Program
+.program {
+    padding-top: 120px;
+
+    .main_title {
+        margin-bottom: 40px;
+    }
+
+    &_card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        &__item {
+            background: #fff;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+            width: calc(100% / 3 - 16px);
+            border-radius: 56px;
+            border: 1px solid #DBDBDB;
+            font-family: $font-montserrat;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            li {
+                background: #F1F2F6;
+                border-radius: 50px;
+                padding: 6px 10px 6px 6px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 100%;
+            }
+
+            h4 {
+                margin: 0;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 120%;
+            }
+
+            .main-img {
+                position: absolute;
+                right: 40px;
+                top: 34px;
+                z-index: -1;
+            }
+        }
+
+        &:not(.active) .program_card__item:nth-child(n+10) {
+            display: none;
+        }
+    }
+
+    .btn_wrap {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            outline: none;
+            border: none;
+            background: transparent;
+            font-family: $font-montserrat;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 160%;
+
+            span:nth-child(2) {
+                display: none;
+            }
+
+            &.active {
+                span {
+                    display: none;
+
+                    &:nth-child(2) {
+                        display: inline-block;
+                    }
+                }
+
+                img {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+    }
+}
+// Program end
+
+.corporateBenefit {
+    padding: 120px 0 0;
+}
+
+.merionAbout {
+    padding: 0;
+    margin-bottom: 120px;
+}
