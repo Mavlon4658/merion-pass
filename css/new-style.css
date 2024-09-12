@@ -78,8 +78,12 @@ body._body--new li {
 .home img {
   position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: 0;
+  right: -17px;
+  bottom: -246px;
+  width: 1156px;
+}
+.home img.sm {
+  display: none;
 }
 
 .about {
@@ -91,6 +95,8 @@ body._body--new li {
 }
 .about_content {
   margin-bottom: 120px;
+  border-radius: 0 0 56px 56px;
+  overflow: hidden;
 }
 .about_body {
   background: #B6D3FF;
@@ -109,9 +115,10 @@ body._body--new li {
 }
 .about_body img {
   position: absolute;
-  right: 0;
+  right: 107px;
   bottom: 0;
   z-index: -1;
+  width: 398px;
 }
 .about_card {
   display: flex;
@@ -397,6 +404,10 @@ body._body--new li {
   width: 277px;
 }
 
+.corporateConsultation {
+  padding: 120px 0;
+}
+
 @media (max-width: 1400px) {
   .choose li:nth-child(1) .choose_card:last-child {
     width: 436px;
@@ -419,8 +430,8 @@ body._body--new li {
     max-width: 660px;
   }
   .about_body img {
-    right: -135px;
-    width: 500px;
+    right: 0px;
+    width: 353px;
   }
   .merionAbout__certificate {
     position: relative;
@@ -453,8 +464,10 @@ body._body--new li {
     height: 645px;
   }
   .home img {
-    min-width: 1010px;
-    width: 1010px;
+    min-width: 890px;
+    width: 890px;
+    right: -6px;
+    bottom: -156px;
   }
   .about_content {
     border-radius: 0 0 56px 56px;
@@ -465,8 +478,8 @@ body._body--new li {
     max-width: 411px;
   }
   .about_body img {
-    right: -135px;
-    width: 500px;
+    right: -20px;
+    width: 355px;
   }
   .about_card__item {
     padding: 32px;
@@ -574,8 +587,16 @@ body._body--new li {
     font-weight: 300;
   }
   .home img {
-    min-width: 700px;
-    width: 700px;
+    min-width: 748px;
+    width: 748px;
+    right: -20px;
+    bottom: -155px;
+  }
+  .home img.lg {
+    display: none;
+  }
+  .home img.sm {
+    display: block;
   }
   .about {
     padding-top: 80px;
@@ -596,8 +617,8 @@ body._body--new li {
     font-weight: 400;
   }
   .about_body img {
-    right: -165px;
-    width: 440px;
+    right: -70px;
+    width: 350px;
   }
   .about_card {
     gap: 16px;
@@ -744,6 +765,9 @@ body._body--new li {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .corporateConsultation {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 767px) {
   .main_title {
@@ -755,7 +779,7 @@ body._body--new li {
   .home {
     height: 666px;
     border-radius: 0 0 32px 32px;
-    padding-top: 80px;
+    padding-top: 56px;
   }
   .home h2 {
     font-size: 24px;
@@ -792,8 +816,9 @@ body._body--new li {
     padding-bottom: 182px;
   }
   .about_body img {
-    right: -70px;
-    width: 400px;
+    right: 0px;
+    bottom: -9.5px;
+    width: 241px;
   }
   .about_card {
     gap: 8px;
@@ -906,5 +931,8 @@ body._body--new li {
   }
   .merionAbout__certificate-txt {
     font-size: 14px;
+  }
+  .corporateConsultation {
+    padding: 48px 0;
   }
 }/*# sourceMappingURL=new-style.css.map */
