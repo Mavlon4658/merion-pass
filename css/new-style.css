@@ -41,12 +41,14 @@ body._body--new li {
   font-family: "Benzin", sans-serif;
   font-size: 48px;
   line-height: 120%;
+  margin: 0;
 }
 .main_description {
   font-family: "Montserrat", system-ui;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
   line-height: 160%;
+  margin: 0;
 }
 
 .home {
@@ -67,7 +69,7 @@ body._body--new li {
 }
 .home p {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   opacity: 0.8;
   max-width: 587px;
   font-family: "Montserrat", system-ui;
@@ -87,13 +89,15 @@ body._body--new li {
   max-width: 912px;
   margin: 24px 0 64px;
 }
+.about_content {
+  margin-bottom: 120px;
+}
 .about_body {
   background: #B6D3FF;
   border-radius: 56px;
   position: relative;
   z-index: 1;
   padding: 40px 64px;
-  margin-bottom: 120px;
 }
 .about_body p {
   font-family: "Montserrat", system-ui;
@@ -101,6 +105,7 @@ body._body--new li {
   font-weight: 500;
   line-height: 160%;
   max-width: 660px;
+  margin: 0;
 }
 .about_body img {
   position: absolute;
@@ -128,6 +133,7 @@ body._body--new li {
   font-family: "Benzin", sans-serif;
   line-height: 120%;
   opacity: 0.7;
+  margin-bottom: 0;
 }
 .about_card__item h4 {
   font-size: 24px;
@@ -283,11 +289,30 @@ body._body--new li {
   z-index: 1;
   width: calc(33.3333333333% - 16px);
   border-radius: 56px;
-  border: 1px solid #DBDBDB;
   font-family: "Montserrat", system-ui;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.program_card__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 56px;
+  border: 1px solid #DBDBDB;
+  z-index: -1;
+  transition: 0.2s ease all;
+}
+.program_card__item:hover:before {
+  border: 2.5px solid #6060F0;
+}
+.program_card__item:hover h4 {
+  color: #6060F0;
 }
 .program_card__item ul {
   display: flex;
@@ -369,5 +394,427 @@ body._body--new li {
   }
   .choose li:nth-child(3) .choose_card:last-child {
     width: 511px;
+  }
+  .about_content {
+    border-radius: 0 0 56px 56px;
+    overflow: hidden;
+  }
+  .about_body p {
+    font-family: "Montserrat", system-ui;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 160%;
+    max-width: 660px;
+  }
+  .about_body img {
+    right: -135px;
+    width: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .home {
+    padding: 88px 0 0;
+    height: 645px;
+  }
+  .home img {
+    min-width: 1010px;
+    width: 1010px;
+  }
+  .about_content {
+    border-radius: 0 0 56px 56px;
+    overflow: hidden;
+  }
+  .about_body p {
+    font-size: 26px;
+    max-width: 411px;
+  }
+  .about_body img {
+    right: -135px;
+    width: 500px;
+  }
+  .about_card__item {
+    padding: 32px;
+  }
+  .about_card__item h3 {
+    font-size: 32px;
+    font-family: "Benzin", sans-serif;
+    line-height: 120%;
+    opacity: 0.7;
+    min-height: 76.8px;
+  }
+  .about_card__item h4 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 120%;
+    color: #1F1F1F;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .about_card__item p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 160%;
+    margin-bottom: 0;
+  }
+  .about_card__item:nth-child(2) {
+    width: 312px;
+    flex-shrink: 0;
+  }
+  .about_card__item:nth-child(2) h3, .about_card__item:nth-child(2) h4 {
+    color: #163DA8;
+    opacity: 1;
+  }
+  .about_card__item:nth-child(3) {
+    background: #163DA8;
+    color: #fff;
+  }
+  .about_card__item:nth-child(3) h3, .about_card__item:nth-child(3) h4 {
+    opacity: 1;
+    color: #fff;
+  }
+  .work_card {
+    gap: 16px;
+  }
+  .work_card__item {
+    padding: 32px;
+  }
+  .work_card__item h3 {
+    margin-bottom: 32px;
+  }
+  .choose {
+    background-image: url("../images/choose-bg-lg.png");
+  }
+  .choose li:nth-child(1) .choose_card:last-child {
+    width: 355px;
+  }
+  .choose li:nth-child(2) .choose_card:first-child {
+    width: 468px;
+  }
+  .choose li:nth-child(3) .choose_card:last-child {
+    width: 440px;
+  }
+  .program_card__item {
+    width: calc(50% - 12px);
+  }
+  .program_card:not(.active) .program_card__item:nth-child(n+7) {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .main_title {
+    font-size: 40px;
+  }
+  .main_description {
+    font-size: 20px;
+  }
+  .home {
+    padding: 56px 0 0;
+    height: 600px;
+    border-radius: 0 0 64px 64px;
+  }
+  .home h2 {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .home p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .home img {
+    min-width: 700px;
+    width: 700px;
+  }
+  .about {
+    padding-top: 80px;
+  }
+  .about .main_description {
+    margin-bottom: 40px;
+  }
+  .about_content {
+    border-radius: 0 0 32px 32px;
+    margin-bottom: 80px;
+  }
+  .about_body {
+    border-radius: 32px;
+  }
+  .about_body p {
+    max-width: 250px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .about_body img {
+    right: -165px;
+    width: 440px;
+  }
+  .about_card {
+    gap: 16px;
+  }
+  .about_card__item {
+    padding: 24px;
+    border-radius: 32px;
+  }
+  .about_card__item h3 {
+    font-size: 20px;
+    min-height: 48px;
+  }
+  .about_card__item h4 {
+    font-size: 16px;
+  }
+  .about_card__item p {
+    font-size: 12px;
+    min-height: 38px;
+  }
+  .about_card__item:nth-child(2) {
+    width: 100%;
+    flex-shrink: inherit;
+  }
+  .about_card__item:nth-child(3) {
+    width: 202px;
+    flex-shrink: 0;
+  }
+  .work {
+    padding: 80px 0;
+  }
+  .work_card {
+    gap: 16px;
+  }
+  .work_card__item {
+    padding: 24px;
+    border-radius: 32px;
+  }
+  .work_card__item h3 {
+    font-size: 20px;
+  }
+  .work_card__item h4 {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .work_card__item p {
+    font-size: 12px;
+  }
+  .choose {
+    padding: 64px 0;
+  }
+  .choose_card {
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 32px;
+  }
+  .choose_card h4 {
+    font-size: 20px;
+  }
+  .choose_card p {
+    font-size: 14px;
+  }
+  .choose ul {
+    gap: 18px;
+  }
+  .choose li {
+    gap: 16px;
+  }
+  .choose li:nth-child(1) .choose_card:last-child {
+    width: 220px;
+  }
+  .choose li:nth-child(2) .choose_card:first-child {
+    width: 326px;
+  }
+  .choose li:nth-child(3) .choose_card:last-child {
+    width: 306px;
+  }
+  .program {
+    padding-top: 80px;
+  }
+  .program_card {
+    gap: 16px;
+  }
+  .program_card__item {
+    width: calc(50% - 8px);
+    padding: 24px;
+    border-radius: 32px;
+    gap: 16px;
+  }
+  .program_card__item::before {
+    border-radius: 32px;
+  }
+  .program_card__item h4 {
+    font-size: 20px;
+  }
+  .program_card__item .main-img {
+    width: 39px;
+    right: 24px;
+    top: 17px;
+  }
+  .program_card:not(.active) .program_card__item:nth-child(n+7) {
+    display: none;
+  }
+  .program .btn_wrap button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 16px 32px;
+    border-radius: 16px;
+    background: #E3E4EF;
+  }
+  .corporateBenefit {
+    padding: 80px 0 0;
+  }
+  .merionAbout {
+    padding: 0;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .main_title {
+    font-size: 24px;
+  }
+  .main_description {
+    font-size: 16px;
+  }
+  .home {
+    height: 666px;
+    border-radius: 0 0 32px 32px;
+    padding-top: 80px;
+  }
+  .home h2 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  .home p {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  .home a {
+    width: 100%;
+    justify-content: center;
+  }
+  .home img {
+    min-width: 700px;
+    width: 700px;
+  }
+  .about {
+    padding-top: 48px;
+  }
+  .about .main_description {
+    margin: 16px 0 40px;
+  }
+  .about_content {
+    margin-bottom: 48px;
+  }
+  .about_body {
+    padding: 24px;
+  }
+  .about_body p {
+    max-width: 100% px;
+    font-size: 16px;
+    padding-bottom: 182px;
+  }
+  .about_body img {
+    right: -70px;
+    width: 400px;
+  }
+  .about_card {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .about_card__item {
+    padding: 24px;
+    border-radius: 32px;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .about_card__item h3 {
+    font-size: 18px;
+    min-height: auto;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .about_card__item div {
+    width: 50%;
+  }
+  .about_card__item p {
+    min-height: auto;
+    padding-right: 10px;
+  }
+  .about_card__item:nth-child(2) {
+    width: 100%;
+    flex-shrink: inherit;
+  }
+  .about_card__item:nth-child(3) {
+    width: 100%;
+  }
+  .work {
+    padding: 48px 0;
+  }
+  .work .main_description {
+    margin: 16px 0 24px;
+  }
+  .work_card {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .work_card__item {
+    width: calc(50% - 4px);
+  }
+  .work_card__item h3 {
+    font-size: 18px;
+  }
+  .choose {
+    padding: 48px 0;
+    background-image: url("../images/choose-bg-sm.png");
+  }
+  .choose_card {
+    gap: 0;
+    position: relative;
+    width: 100% !important;
+  }
+  .choose_card img {
+    position: absolute;
+    width: 24px;
+    top: 24px;
+    left: 24px;
+  }
+  .choose_card h4 {
+    font-size: 16px;
+    padding-left: 40px;
+    margin-bottom: 21px;
+  }
+  .choose_card p {
+    font-size: 14px;
+  }
+  .choose ul {
+    gap: 8px;
+  }
+  .choose li {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .program {
+    padding-top: 48px;
+  }
+  .program .main_title {
+    margin-bottom: 24px;
+  }
+  .program_card {
+    gap: 8px;
+  }
+  .program_card__item {
+    width: 100%;
+  }
+  .program_card:not(.active) .program_card__item:nth-child(n+4) {
+    display: none;
+  }
+  .program .btn_wrap button {
+    width: 100%;
+    justify-content: center;
+  }
+  .corporateBenefit {
+    padding: 48px 0 0;
+  }
+  .merionAbout {
+    padding: 0;
+    margin-bottom: 48px;
   }
 }/*# sourceMappingURL=new-style.css.map */
