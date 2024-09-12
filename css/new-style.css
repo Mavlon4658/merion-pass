@@ -373,13 +373,19 @@ body._body--new li {
 .program .btn_wrap button span:nth-child(2) {
   display: none;
 }
+.program .btn_wrap button:hover, .program .btn_wrap button:active {
+  color: #163DA8;
+}
+.program .btn_wrap button:hover svg path, .program .btn_wrap button:active svg path {
+  fill: #163DA8;
+}
 .program .btn_wrap button.active span {
   display: none;
 }
 .program .btn_wrap button.active span:nth-child(2) {
   display: inline-block;
 }
-.program .btn_wrap button.active img {
+.program .btn_wrap button.active svg {
   transform: rotateZ(180deg);
 }
 

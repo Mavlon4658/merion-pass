@@ -455,6 +455,14 @@ body._body--new {
                 display: none;
             }
 
+            &:hover, &:active {
+                color: #163DA8;
+
+                svg path {
+                    fill: #163DA8;
+                }
+            }
+
             &.active {
                 span {
                     display: none;
@@ -464,7 +472,7 @@ body._body--new {
                     }
                 }
 
-                img {
+                svg {
                     transform: rotateZ(180deg);
                 }
             }
